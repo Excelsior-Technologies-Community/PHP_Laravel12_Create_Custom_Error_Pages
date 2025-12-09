@@ -8,12 +8,12 @@ This project helps you test and understand how Laravel handles errors like **404
 
 ## Project Features
 
-✅ No database required  
-✅ Works with Laravel 10 / 11 / 12  
-✅ Tailwind CSS UI  
-✅ Custom error pages (404, 500, 403, 503, 419, 429)  
-✅ Live testing routes for every error  
-✅ Simple and lightweight  
+No database required  
+Works with Laravel 10 / 11 / 12  
+Tailwind CSS UI  
+Custom error pages (404, 500, 403, 503, 419, 429)  
+Live testing routes for every error  
+Simple and lightweight  
 
 ---
 
