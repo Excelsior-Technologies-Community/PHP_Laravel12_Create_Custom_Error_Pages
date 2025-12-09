@@ -17,29 +17,10 @@ This project helps you test and understand how Laravel handles errors like **404
 
 ---
 
-## 📁 Project Structure
+📸 Project Screenshots
+<img width="1072" height="780" alt="image" src="https://github.com/user-attachments/assets/4f5b48e4-c263-4e72-ac1a-d019b8d1882f" />
+<img width="1760" height="752" alt="image" src="https://github.com/user-attachments/assets/b691c45e-13ba-46e4-a05e-e209c15a7de3" />
 
-error-pages-demo/
-├── .env
-├── bootstrap/
-│ └── app.php
-├── resources/
-│ └── views/
-│ ├── home.blade.php
-│ ├── welcome.blade.php
-│ └── errors/
-│ ├── 404.blade.php
-│ ├── 500.blade.php
-│ ├── 403.blade.php
-│ ├── 503.blade.php
-│ ├── 419.blade.php
-│ └── 429.blade.php
-├── routes/
-│ └── web.php
-└── composer.json
-
-
----
 
 ## ⚙️ Installation Guide
 
@@ -88,6 +69,27 @@ URL	Error Type
 /exception	Unhandled Exception
 /any-wrong-url	404 Error
 
+## 📁 Project Structure
+
+error-pages-demo/
+├── .env
+├── bootstrap/
+│ └── app.php
+├── resources/
+│ └── views/
+│ ├── home.blade.php
+│ ├── welcome.blade.php
+│ └── errors/
+│ ├── 404.blade.php
+│ ├── 500.blade.php
+│ ├── 403.blade.php
+│ ├── 503.blade.php
+│ ├── 419.blade.php
+│ └── 429.blade.php
+├── routes/
+│ └── web.php
+└── composer.json
+
 Example:
 
 http://127.0.0.1:8000/test/404
@@ -101,9 +103,3 @@ Icons from Font Awesome
 Responsive cards & buttons
 
 Clean Modern UI
-
-📸 Project Screenshots
-<img width="1072" height="780" alt="image" src="https://github.com/user-attachments/assets/4f5b48e4-c263-4e72-ac1a-d019b8d1882f" />
-<img width="1760" height="752" alt="image" src="https://github.com/user-attachments/assets/b691c45e-13ba-46e4-a05e-e209c15a7de3" />
-
-
