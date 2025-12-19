@@ -1,59 +1,105 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# PHP_Laravel12_Create_Custom_Error_Pages 
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+A beautiful Laravel project demonstrating fully customized **error pages** using **Tailwind CSS**.
 
-## About Laravel
+This project helps you test and understand how Laravel handles errors like **404, 500, 403, 503, 419, and 429** with clean UI.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+---
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Project Features
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+No database required  
+Works with Laravel 10 / 11 / 12  
+Tailwind CSS UI  
+Custom error pages (404, 500, 403, 503, 419, 429)  
+Live testing routes for every error  
+Simple and lightweight  
 
-## Learning Laravel
+---
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+# Project Screenshots
+<img width="1072" height="780" alt="image" src="https://github.com/user-attachments/assets/4f5b48e4-c263-4e72-ac1a-d019b8d1882f" />
+<img width="1760" height="752" alt="image" src="https://github.com/user-attachments/assets/b691c45e-13ba-46e4-a05e-e209c15a7de3" />
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
 
-## Laravel Sponsors
+##  Installation Guide
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+```bash
+git clone https://github.com/your-username/error-pages-demo.git
+cd error-pages-demo
 
-### Premium Partners
+2. Install Dependencies
+composer install
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+3. Create .env File
+APP_NAME="Error Pages Demo"
+APP_ENV=local
+APP_DEBUG=true
+APP_URL=http://localhost
 
-## Contributing
+CACHE_DRIVER=file
+SESSION_DRIVER=file
+QUEUE_CONNECTION=sync
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+4. Generate Application Key
+php artisan key:generate
 
-## Code of Conduct
+5. Clear Cache
+php artisan config:clear
+php artisan route:clear
+php artisan view:clear
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+## Run the Project
+php artisan serve
 
-## Security Vulnerabilities
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Open in browser:
 
-## License
+http://127.0.0.1:8000
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Test Error Pages
+URL	Error Type
+/test/404	Page Not Found
+/test/500	Server Error
+/test/403	Forbidden
+/test/503	Maintenance
+/test/419	Page Expired
+/test/429	Too Many Requests
+/admin	Protected Route
+/exception	Unhandled Exception
+/any-wrong-url	404 Error
+
+## Project Structure
+
+error-pages-demo/
+├── .env
+├── bootstrap/
+│ └── app.php
+├── resources/
+│ └── views/
+│ ├── home.blade.php
+│ ├── welcome.blade.php
+│ └── errors/
+│ ├── 404.blade.php
+│ ├── 500.blade.php
+│ ├── 403.blade.php
+│ ├── 503.blade.php
+│ ├── 419.blade.php
+│ └── 429.blade.php
+├── routes/
+│ └── web.php
+└── composer.json
+
+Example:
+
+http://127.0.0.1:8000/test/404
+
+Design Info
+
+UI built with Tailwind CSS
+
+Icons from Font Awesome
+
+Responsive cards & buttons
+
+Clean Modern UI
