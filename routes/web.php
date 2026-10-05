@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TestErrorController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ErrorExportController;
+use App\Http\Controllers\ErrorSimulatorController;
 
 // Main home page (changed from welcome to home)
 Route::get('/', function () {
@@ -55,3 +56,7 @@ Route::get('/dashboard', [DashboardController::class,'index'])->name('dashboard'
 Route::get('/dashboard/error/{id}', [DashboardController::class,'show'])->name('error.show');
 
 Route::get('/dashboard/export', [ErrorExportController::class,'export'])->name('dashboard.export');
+
+// Real-Time Interactive Error Sandbox & Simulation Studio Routes
+Route::get('/error-sandbox', [ErrorSimulatorController::class, 'index'])->name('error.sandbox');
+Route::get('/error-sandbox/trigger', [ErrorSimulatorController::class, 'trigger'])->name('error.sandbox.trigger');

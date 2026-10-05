@@ -58,6 +58,7 @@ if (!function_exists('getErrorTitle')) {
         return match($statusCode) {
             400 => 'Bad Request',
             401 => 'Unauthorized',
+            402 => 'Payment Required',
             403 => 'Forbidden',
             404 => 'Not Found',
             405 => 'Method Not Allowed',
@@ -65,8 +66,10 @@ if (!function_exists('getErrorTitle')) {
             422 => 'Validation Error',
             429 => 'Too Many Requests',
             500 => 'Internal Server Error',
+            502 => 'Bad Gateway',
             503 => 'Service Unavailable',
-            default => 'Error',
+            504 => 'Gateway Timeout',
+            default => 'System Error',
         };
     }
 }
@@ -75,17 +78,20 @@ if (!function_exists('getErrorMessage')) {
     function getErrorMessage(int $statusCode): string
     {
         return match($statusCode) {
-            400 => 'The request was invalid or cannot be served.',
+            400 => 'The request syntax is invalid or corrupted.',
             401 => 'Authentication is required to access this resource.',
+            402 => 'Payment or subscription upgrade is required.',
             403 => 'You do not have permission to access this resource.',
             404 => 'The requested resource could not be found.',
-            405 => 'The requested method is not allowed for this resource.',
-            419 => 'Your session has expired. Please refresh and try again.',
-            422 => 'The request contains invalid or missing parameters.',
-            429 => 'Too many requests. Please try again later.',
-            500 => 'An internal server error occurred. Please try again later.',
-            503 => 'The service is temporarily unavailable. Please try again later.',
-            default => 'An error occurred.',
+            405 => 'The requested HTTP method is not allowed.',
+            419 => 'Your CSRF security session token has expired.',
+            422 => 'The request contains invalid or missing input parameters.',
+            429 => 'Too many requests. Rate limit exceeded.',
+            500 => 'An internal server error occurred.',
+            502 => 'Bad gateway response received from upstream proxy.',
+            503 => 'The service is temporarily unavailable due to maintenance.',
+            504 => 'Gateway timeout occurred waiting for upstream server.',
+            default => 'An unexpected system error occurred.',
         };
     }
 }
