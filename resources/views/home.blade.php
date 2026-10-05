@@ -35,10 +35,13 @@
                 A Laravel project showcasing beautiful, responsive error pages with custom designs.
                 Test different error scenarios below.
             </p>
-            <div class="mt-6">
+            <div class="mt-6 flex flex-wrap justify-center items-center gap-3">
                 <span class="inline-block bg-green-100 text-green-800 text-sm font-semibold px-4 py-2 rounded-full">
                     Laravel {{ app()->version() }}
                 </span>
+                <a href="/error-sandbox" class="inline-flex items-center gap-2 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 text-white font-bold text-sm px-5 py-2.5 rounded-full shadow-lg shadow-indigo-500/30 transition-all transform hover:scale-105">
+                    ⚡ Launch Error Sandbox Studio (13 Status Codes)
+                </a>
             </div>
         </header>
 
